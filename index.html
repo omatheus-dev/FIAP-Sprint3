@@ -8,38 +8,87 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <nav class="sidebar">
-        <h2>Irrigação</h2>
-        <ul>
+        <h1>Irriga<span>Smart</span></h1>
+        <ul class="sidebar__nav">
         <li onclick="mostrar('dashboard')">Dashboard</li>
-        <li onclick="mostrar('histórico')">Histórico</li>
+        <li onclick="mostrar('historico')">Histórico</li>
         <li onclick="mostrar('sistemas')">Sistemas</li>
         <li onclick="mostrar('fale-conosco')">Fale Conosco</li>
         </ul>
     </nav>
 
     <main class="content">
-        <div id="dashboard" class="aba">
-        <h1>Dashboard</h1>
-        <p>Visão geral do sistema de irrigação</p>
-        
+        <section id="dashboard" class="aba">
+          <div class="dashboard__banner">
+            <div class="dashboard__banner__conteudo">
+                <h2>
+                Irrigação <span>Inteligente</span>
+                para melhores resultados
+              </h2>
+              <p>
+                Tecnologia que monitora e automatiza a irrigação, 
+                economizando água e aumentando a produtividade
+              </p>
+            </div>
+          </div>
 
-        </div>
+          <div class="dashboard__painel">
+            <h2>Painel de controle</h2>
+            <ul class="dashboard__painel__list">
+              <li>
+                <div class="painel__conteudo">
+                  <div>
+                    <img class="painel__conteudo-icone" src="./asserts/arquitetura.png" alt="ícone de arquitetura">
+                  </div>
+                  <h3>Status da irrigação</h3>
+                  <p>Ativa</p>
+                </div>
+              </li>
 
-        <div id="monitoramento" class="aba">
+              <li>
+                <div class="painel__conteudo">
+                  <div>
+                    <img class="painel__conteudo-icone" src="./asserts/relogio.png" alt="ícone de relógio">
+                  </div>
+                  <h3>Próxima irrigação</h3>
+                  <p>06:00</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="painel__conteudo">
+                  <div>
+                    <img class="painel__conteudo-icone" src="./asserts/agua.png" alt=" ícone de um pingo de água">
+                  </div>
+                  <h3>Consumo de água hoje</h3>
+                  <p>20L</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section id="historico" class="aba">
         <h1>Monitoramento</h1>
         <p>Umidade do solo, sensores...</p>
-        </div>
+        </section>
 
-        <div id="agenda" class="aba">
+        <section id="sistemas" class="aba">
         <h1>Agendamento</h1>
         <p>Horários de irrigação</p>
-        </div>
+        </section>
+
+        <section id="fale-conosco" class="aba">
+        <h1>fale conosco</h1>
+        <p>Horários de irrigação</p>
+        </section>
     </main>
   </div>
 
