@@ -108,8 +108,135 @@
         </section>
 
         <section id="sistemas" class="aba">
-        <h1>Sistemas</h1>
-        <p>Horários de irrigação</p>
+          <div class="sistemas__enunciado">
+            <h1>Sistemas</h1>
+            <p>Gerencie as zonas e os horários de irrigação</p>
+          </div>
+
+          <ul class="sistemas__painel__list">
+            <li>
+              <div class="painel__conteudo">
+                <img class="painel__conteudo-icone arquitetura" src="./asserts/dashboard/arquitetura.png" alt="ícone de zonas">
+                <div class="painel__conteudo-box">
+                  <h3 class="painel__conteudo-descricao">Zonas ativas</h3>
+                  <p class="painel__conteudo-texto texto-arquitetura">3 / 5</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="painel__conteudo">
+                <img class="painel__conteudo-icone relogio" src="./asserts/dashboard/relogio.png" alt="ícone de relógio">
+                <div class="painel__conteudo-box">
+                  <h3 class="painel__conteudo-descricao">Próxima irrigação</h3>
+                  <p class="painel__conteudo-texto texto-relogio">06:00</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="painel__conteudo">
+                <img class="painel__conteudo-icone agua" src="./asserts/dashboard/agua.png" alt="ícone de água">
+                <div class="painel__conteudo-box">
+                  <h3 class="painel__conteudo-descricao">Consumo hoje</h3>
+                  <p class="painel__conteudo-texto texto-agua">20 L</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="sistemas__grid">
+            <div class="sistemas__zonas">
+              <h3 class="sistemas__zonas-subtitulo">Zonas de Irrigação</h3>
+              <ul class="sistemas__zonas__list">
+                <li class="zona__item">
+                  <div class="zona__item__info">
+                    <h4 class="zona__item-nome">Área 1 — Horticultura</h4>
+                    <p class="zona__item-detalhe">30 min · 06:00 · Seg a Sex</p>
+                  </div>
+                  <span class="zona__item-badge zona__item-badge--ativo">Ativo</span>
+                </li>
+
+                <li class="zona__item">
+                  <div class="zona__item__info">
+                    <h4 class="zona__item-nome">Área 2 — Fruticultura</h4>
+                    <p class="zona__item-detalhe">25 min · 07:30 · Diário</p>
+                  </div>
+                  <span class="zona__item-badge zona__item-badge--ativo">Ativo</span>
+                </li>
+
+                <li class="zona__item">
+                  <div class="zona__item__info">
+                    <h4 class="zona__item-nome">Área 3 — Pastagem</h4>
+                    <p class="zona__item-detalhe">20 min · 09:00 · Sáb e Dom</p>
+                  </div>
+                  <span class="zona__item-badge zona__item-badge--ativo">Ativo</span>
+                </li>
+
+                <li class="zona__item">
+                  <div class="zona__item__info">
+                    <h4 class="zona__item-nome">Área 4 — Estufa</h4>
+                    <p class="zona__item-detalhe">15 min · 11:00 · Ter e Qui</p>
+                  </div>
+                  <span class="zona__item-badge zona__item-badge--inativo">Inativo</span>
+                </li>
+
+                <li class="zona__item">
+                  <div class="zona__item__info">
+                    <h4 class="zona__item-nome">Área 5 — Reserva</h4>
+                    <p class="zona__item-detalhe">40 min · 14:00 · Seg, Qua e Sex</p>
+                  </div>
+                  <span class="zona__item-badge zona__item-badge--inativo">Inativo</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sistemas__horarios">
+              <h3 class="sistemas__horarios-subtitulo">Horários Automáticos</h3>
+              <table class="sistemas__horarios__tabela">
+                <thead>
+                  <tr>
+                    <th>Área</th>
+                    <th>Horário</th>
+                    <th>Duração</th>
+                    <th>Dias</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Área 1</td>
+                    <td>06:00</td>
+                    <td>30 min</td>
+                    <td>Seg a Sex</td>
+                  </tr>
+                  <tr>
+                    <td>Área 2</td>
+                    <td>07:30</td>
+                    <td>25 min</td>
+                    <td>Diário</td>
+                  </tr>
+                  <tr>
+                    <td>Área 3</td>
+                    <td>09:00</td>
+                    <td>20 min</td>
+                    <td>Sáb e Dom</td>
+                  </tr>
+                  <tr>
+                    <td>Área 1</td>
+                    <td>16:00</td>
+                    <td>30 min</td>
+                    <td>Ter e Qui</td>
+                  </tr>
+                  <tr>
+                    <td>Área 2</td>
+                    <td>20:00</td>
+                    <td>25 min</td>
+                    <td>Seg, Qua e Sex</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
         <section id="fale-conosco" class="aba">
@@ -152,32 +279,32 @@
 
           <div class="fale-conosco__grid__sbox">
             <ul>
-              <li>
+              <li class="grid__sbox__conteudo">
                 <img src="./asserts/fale-conosco/telefone.png" alt="icone de telefone">
                 <div>
-                  <h4>Telefone</h4>
-                  <p>(11) 99999-9999</p>
+                  <h4 class="grid__sbox__conteudo-subtitulo">Telefone</h4>
+                  <p class="grid__sbox__conteudo-texto">(11) 99999-9999</p>
                 </div>
               </li>
-              <li>
+              <li class="grid__sbox__conteudo">
                 <img src="./asserts/fale-conosco/e-mail.png" alt="icone de email">
                 <div>
-                  <h4> Email</h4>
-                  <p>suporte@irrigasmart.com</p>
+                  <h4 class="grid__sbox__conteudo-subtitulo"> Email</h4>
+                  <p class="grid__sbox__conteudo-texto">suporte@irrigasmart.com</p>
                 </div>
               </li>
-              <li>
+              <li class="grid__sbox__conteudo">
                 <img src="./asserts/fale-conosco/relogio.png" alt="icone de relógio">
                 <div>
-                  <h4>Atendimento</h4>
-                  <p>Segunda a Sexta • 08:00 às 18:00</p>
+                  <h4 class="grid__sbox__conteudo-subtitulo">Atendimento</h4>
+                  <p class="grid__sbox__conteudo-texto">Segunda a Sexta • 08:00 às 18:00</p>
                 </div>
               </li>
-              <li>
-                <img src="./asserts/fale-conosco/localizador.png\" alt="icone de localização">
+              <li class="grid__sbox__conteudo">
+                <img src="./asserts/fale-conosco/mapa.png" alt="icone de localização">
                 <div>
-                  <h4>Localização</h4>
-                  <p>São Paulo • Brasil</p>
+                  <h4 class="grid__sbox__conteudo-subtitulo">Localização</h4>
+                  <p class="grid__sbox__conteudo-texto">São Paulo • Brasil</p>
                 </div>
               </li>
             </ul>

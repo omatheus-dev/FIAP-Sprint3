@@ -52,6 +52,13 @@ body {
   list-style: none;
 }
 
+.sidebar__nav li:hover {
+  color: var(--cor-principal);
+  padding: 0.6rem 0.6rem;
+  background-color: var(--cor-secundaria);
+  border-radius: 0 1rem 0 1rem;
+}
+
 .sidebar li {
   margin: 0.4rem 0.4rem;
   padding: 0.6rem 0.6rem;
@@ -197,12 +204,151 @@ body {
 }
 /* término do css do dashboard */
 
+/* inicio do css do sistemas */
+.sistemas__enunciado {
+  margin: 2rem 4rem;
+}
+
+.sistemas__enunciado h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.sistemas__enunciado p {
+  color: var(--cor-texto-secundaria);
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 0.8rem;
+}
+
+.sistemas__painel__list {
+  display: grid;
+  gap: 3rem;
+  margin: 0 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+}
+
+.sistemas__painel__list li {
+  background-color: var(--cor-cards);
+  border-radius: 1rem;
+}
+
+.sistemas__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 3rem;
+}
+
+.sistemas__zonas {
+  background-color: var(--cor-cards);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.sistemas__zonas-subtitulo {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+  margin-bottom: 1rem;
+}
+
+.sistemas__zonas__list {
+  list-style: none;
+}
+
+.zona__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.zona__item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.zona__item-nome {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-texto-principal);
+  margin-bottom: 0.2rem;
+}
+
+.zona__item-detalhe {
+  font-size: 0.8rem;
+  color: var(--cor-texto-secundaria);
+  font-family: var(--fonte-secundaria);
+}
+
+.zona__item-badge {
+  font-size: 0.75rem;
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  padding: 0.25rem 0.8rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+}
+
+.zona__item-badge--ativo {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+}
+
+.zona__item-badge--inativo {
+  background-color: var(--cor-background);
+  color: var(--cor-texto-secundaria);
+}
+
+.sistemas__horarios {
+  background-color: var(--cor-cards);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.sistemas__horarios-subtitulo {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+  margin-bottom: 1rem;
+}
+
+.sistemas__horarios__tabela {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.sistemas__horarios__tabela th {
+  color: var(--cor-texto-secundaria);
+}
+
+.sistemas__horarios__tabela th,
+.sistemas__horarios__tabela td {
+  padding: 12px 8px;
+  text-align: left;
+  word-wrap: break-word;
+  font-family: var(--fonte-secundaria);
+  font-size: 0.9rem;
+}
+
+.sistemas__horarios__tabela tbody td {
+  border-top: 1px solid #f0f0f0;
+}
+/* término do css do sistemas */
 
 /* inicio do css do fale-conosco */
 .fale-conosco__grid {
   display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 1.6rem;
+  grid-template-columns: 50% 30%;
+  margin: 0 5rem;
+  gap: 4rem;
 }
 
 .fale-conosco__enunciado {
@@ -222,8 +368,8 @@ body {
   padding-top: 0.8rem;
 }
 
-.fale-conosco__grid__fbox {
-  margin: 0 5rem;
+.fale-conosco__grid__fbox,
+.fale-conosco__grid__sbox {
   padding: 1.5rem 2.5rem;
   border-radius: 0.8rem;
   background-color: var(--cor-cards);
@@ -307,8 +453,35 @@ body {
   height: 1.5rem;
 }
 
-.fale-conosco__grid__sbox {
-  background-color: var(--cor-cards);
+.fale-conosco__grid__sbox ul {
+  list-style: none;
+}
+
+.grid__sbox__conteudo {
+  display: flex;
+  height: 8rem;
+  align-items: center;
+}
+
+.grid__sbox__conteudo img {
+  background-color: var(--cor-secundaria);
+  padding: 0.8rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.grid__sbox__conteudo-subtitulo {
+  font-family: var(--fonte-secundaria);
+  font-weight: 750;
+  color: var(--cor-principal);
+  margin-bottom: 0.4rem;
+}
+
+.grid__sbox__conteudo-texto {
+  font-family: var(--fonte-secundaria);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--cor-texto-secundaria);
 }
 
 .aba {
