@@ -4,11 +4,11 @@
   --cor-texto-principal: #000000;
   --cor-texto-secundaria: #9CA3AF;
   --cor-principal: #79AE6F;
-  --cor-secundaria: #9FCB98;
-  --cor-terciaria: #81A6C6;
-  --cor-quartenaria: #AACDDC;
+  --cor-secundaria: #CFE9CB;
+  --cor-azul-principal: #81A6C6;
+  --cor-quartenaria: #CFE6EE;
   --cor-icone-relogio: #FF85BB;
-  --cor-fundo-relogio: #FFCEE3;
+  --cor-fundo-relogio: #FFE4F0;
   --cor-aviso: #DB1A1A;
 
   --fonte-primaria: "Inter", sans-serif, arial;
@@ -25,11 +25,26 @@ body {
   font-family: var(--fonte-primaria);
 }
 
+/* inicio do cs do dashboard */
 .sidebar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 2rem 5rem;
+  border-bottom: 1px solid var(--cor-texto-secundaria)
+}
+
+.sidebar__titulo {
+  display: flex;
+}
+
+.sidebar__titulo h1 {
+  padding-left: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.destaque {
+  color: var(--cor-principal)
 }
 
 .sidebar__nav {
@@ -38,8 +53,17 @@ body {
 }
 
 .sidebar li {
-  margin: 15px 20px;
+  margin: 0.4rem 0.4rem;
+  padding: 0.6rem 0.6rem;
   cursor: pointer;
+  font-family: var(--fonte-secundaria);
+  font-weight: 500;
+}
+
+.sidebar__nav li.ativo {
+  color: var(--cor-cards);
+  background-color: var(--cor-principal);
+  border-radius: 0 1rem 0 1rem;
 }
 
 .dashboard__banner {
@@ -67,6 +91,21 @@ body {
   margin-left: 4rem;
 }
 
+.dashboard__banner__conteudo-subtitulo {
+  font-size: 2rem;
+}
+
+.dashboard__banner__conteudo-texto {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cor-texto-secundaria);
+  margin-top: 0.6rem;
+}
+
+.dashboard__painel-subtitulo {
+  margin: 1.5rem 4rem;
+}
+
 .dashboard__painel__list {
   display: grid;
   gap: 3rem;
@@ -80,12 +119,90 @@ body {
   border-radius: 1rem;
 }
 
-.dashboard__painel__fundo {
-  
+.painel__conteudo {
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
 }
 
-.dashboard__painel__fundo-icone {
+.painel__conteudo-icone {
+  height: 3rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
 
+.arquitetura {
+  background-color: var(--cor-secundaria);
+}
+.relogio {
+  background-color: var(--cor-fundo-relogio);
+}
+.agua {
+  background-color: var(--cor-quartenaria);
+}
+
+.painel__conteudo-box {
+  padding-left: 0.8rem;
+}
+
+.painel__conteudo-texto {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 0.08rem;
+}
+
+.texto-arquitetura {
+  color: var(--cor-principal);
+}
+.texto-relogio {
+  color: var(--cor-icone-relogio);
+}
+.texto-agua {
+  color: var(--cor-azul-principal);
+}
+
+.dashboard__tabela {
+  background-color: var(--cor-cards);
+  border-radius: 1rem;
+  margin: 2rem 3rem 0 3rem;
+  padding: 1rem 0;
+}
+
+.dashboard__tabela-subtitulo {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 2.5rem;
+}
+
+.dashboard__tabela table {
+  width: 100%;
+  table-layout: fixed;
+  padding: 0 2rem;
+}
+
+.dashboard__tabela th {
+  color: var(--cor-texto-secundaria);
+}
+
+.dashboard__tabela th, 
+.dashboard__tabela td {
+  padding: 12px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.dashboard__tabela table tbody td {
+  border-top: 1px solid #f0f0f0;
+}
+/* término do css do dashboard */
+
+
+/* inicio do css do fale-conosco */
+.fale-conosco__grid__formulario {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
 }
 
 .aba {
@@ -95,3 +212,4 @@ body {
 .ativa {
   display: grid;
 }
+

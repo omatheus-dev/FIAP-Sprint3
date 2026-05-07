@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Irrigação</title>
+  <title>Dashboard IrriSmart</title>
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +14,27 @@
 <body>
   <div class="container">
     <nav class="sidebar">
-        <h1>Irriga<span>Smart</span></h1>
-        <ul class="sidebar__nav">
-        <li onclick="mostrar('dashboard')">Dashboard</li>
-        <li onclick="mostrar('historico')">Histórico</li>
-        <li onclick="mostrar('sistemas')">Sistemas</li>
-        <li onclick="mostrar('fale-conosco')">Fale Conosco</li>
-        </ul>
+      <div class="sidebar__titulo">
+        <img src="./asserts/plantar.png" alt="Icone do titulo">
+        <h1>Irriga<span class="destaque">Smart</span></h1>
+      </div>
+
+      <ul class="sidebar__nav">
+        <li onclick="mostrar('dashboard', this)">Dashboard</li>
+        <li onclick="mostrar('sistemas', this)">Sistemas</li>
+        <li onclick="mostrar('fale-conosco', this)">Fale Conosco</li>
+      </ul>
     </nav>
 
     <main class="content">
         <section id="dashboard" class="aba">
           <div class="dashboard__banner">
             <div class="dashboard__banner__conteudo">
-                <h2>
-                Irrigação <span>Inteligente</span>
+                <h2 class="dashboard__banner__conteudo-subtitulo">
+                Irrigação <span class="destaque">Inteligente</span>
                 para melhores resultados
               </h2>
-              <p>
+              <p class="dashboard__banner__conteudo-texto">
                 Tecnologia que monitora e automatiza a irrigação, 
                 economizando água e aumentando a produtividade
               </p>
@@ -39,55 +42,111 @@
           </div>
 
           <div class="dashboard__painel">
-            <h2>Painel de controle</h2>
+            <h2 class="dashboard__painel-subtitulo">Painel de controle</h2>
             <ul class="dashboard__painel__list">
               <li>
                 <div class="painel__conteudo">
-                  <div>
-                    <img class="painel__conteudo-icone" src="./asserts/arquitetura.png" alt="ícone de arquitetura">
+                  <img class="painel__conteudo-icone arquitetura" src="./asserts/arquitetura.png" alt="ícone de arquitetura">
+                  <div class="painel__conteudo-box">
+                    <h3 class="painel__conteudo-descricao">Status da irrigação</h3>
+                    <p class="painel__conteudo-texto texto-arquitetura">Ativa</p>
                   </div>
-                  <h3>Status da irrigação</h3>
-                  <p>Ativa</p>
                 </div>
               </li>
 
               <li>
                 <div class="painel__conteudo">
-                  <div>
-                    <img class="painel__conteudo-icone" src="./asserts/relogio.png" alt="ícone de relógio">
+                  <img class="painel__conteudo-icone relogio" src="./asserts/relogio.png" alt="ícone de relógio">
+                  <div class="painel__conteudo-box">
+                    <h3 class="painel__conteudo-descricao">Próxima irrigação</h3>
+                    <p class="painel__conteudo-texto texto-relogio">06:00</p>
                   </div>
-                  <h3>Próxima irrigação</h3>
-                  <p>06:00</p>
                 </div>
               </li>
 
               <li>
                 <div class="painel__conteudo">
-                  <div>
-                    <img class="painel__conteudo-icone" src="./asserts/agua.png" alt=" ícone de um pingo de água">
+                  <img class="painel__conteudo-icone agua" src="./asserts/agua.png" alt=" ícone de um pingo de água">
+                  <div class="painel__conteudo-box">
+                    <h3 class="painel__conteudo-descricao">Consumo de água hoje</h3>
+                    <p class="painel__conteudo-texto texto-agua">20L</p>
                   </div>
-                  <h3>Consumo de água hoje</h3>
-                  <p>20L</p>
                 </div>
               </li>
             </ul>
           </div>
 
-        </section>
+          <div class="dashboard__tabela">
+            <h3 class="dashboard__tabela-subtitulo">Irrigações de Hoje</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Área</th>
+                  <th>Início</th>
+                  <th>Duração</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
 
-        <section id="historico" class="aba">
-        <h1>Monitoramento</h1>
-        <p>Umidade do solo, sensores...</p>
+              <tbody>
+                <tr>
+                  <td>Área 1</td>
+                  <td>6:00</td>
+                  <td>30 min</td>
+                  <td>Concluído</td>
+                </tr>
+
+                <tr>
+                  <td>Área 2</td>
+                  <td>7:30</td>
+                  <td>25 min</td>
+                  <td>Em andamento</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="sistemas" class="aba">
-        <h1>Agendamento</h1>
+        <h1>Sistemas</h1>
         <p>Horários de irrigação</p>
         </section>
 
         <section id="fale-conosco" class="aba">
-        <h1>fale conosco</h1>
-        <p>Horários de irrigação</p>
+        <h1>Fale conosco</h1>
+        <p>
+          Precisa de ajuda com o sistema de irrigação?<br>
+          Entre em contanto com nossa equipe.
+        </p>
+        <div class="fale-conosco__grid">
+          <div fale-conosco__grid__fbox>
+            <h2>Enviar Mensagem</h2>
+            <form class="fale-conosco__grid__formulario">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Digite seu email" required>
+
+              <label for="assunto">Assunto</label>
+              <input type="text" id="assunto" placeholder="Digite o assunto">
+
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" 
+              placeholder="Descreva sua dúvida ou problema">
+              </textarea>
+
+              <button type="submit">
+                <img src="./asserts/enviar.png" alt="Icone de enviar">
+                Enviar Mensagem
+              </button>
+
+            </form>
+          </div>
+          <div class="fale-conosco__grid__sbox">
+            
+          </div>
+        </div>
         </section>
     </main>
   </div>
