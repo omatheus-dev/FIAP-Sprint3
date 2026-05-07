@@ -15,7 +15,7 @@
   <div class="container">
     <nav class="sidebar">
       <div class="sidebar__titulo">
-        <img src="./asserts/plantar.png" alt="Icone do titulo">
+        <img src="./asserts/dashboard/plantar.png" alt="Icone do titulo">
         <h1>Irriga<span class="destaque">Smart</span></h1>
       </div>
 
@@ -46,7 +46,7 @@
             <ul class="dashboard__painel__list">
               <li>
                 <div class="painel__conteudo">
-                  <img class="painel__conteudo-icone arquitetura" src="./asserts/arquitetura.png" alt="ícone de arquitetura">
+                  <img class="painel__conteudo-icone arquitetura" src="./asserts/dashboard/arquitetura.png" alt="ícone de arquitetura">
                   <div class="painel__conteudo-box">
                     <h3 class="painel__conteudo-descricao">Status da irrigação</h3>
                     <p class="painel__conteudo-texto texto-arquitetura">Ativa</p>
@@ -56,7 +56,7 @@
 
               <li>
                 <div class="painel__conteudo">
-                  <img class="painel__conteudo-icone relogio" src="./asserts/relogio.png" alt="ícone de relógio">
+                  <img class="painel__conteudo-icone relogio" src="./asserts/dashboard/relogio.png" alt="ícone de relógio">
                   <div class="painel__conteudo-box">
                     <h3 class="painel__conteudo-descricao">Próxima irrigação</h3>
                     <p class="painel__conteudo-texto texto-relogio">06:00</p>
@@ -66,7 +66,7 @@
 
               <li>
                 <div class="painel__conteudo">
-                  <img class="painel__conteudo-icone agua" src="./asserts/agua.png" alt=" ícone de um pingo de água">
+                  <img class="painel__conteudo-icone agua" src="./asserts/dashboard/agua.png" alt=" ícone de um pingo de água">
                   <div class="painel__conteudo-box">
                     <h3 class="painel__conteudo-descricao">Consumo de água hoje</h3>
                     <p class="painel__conteudo-texto texto-agua">20L</p>
@@ -113,38 +113,74 @@
         </section>
 
         <section id="fale-conosco" class="aba">
-        <h1>Fale conosco</h1>
-        <p>
-          Precisa de ajuda com o sistema de irrigação?<br>
-          Entre em contanto com nossa equipe.
-        </p>
+          <div class="fale-conosco__enunciado">
+            <h1>Fale conosco</h1>
+            <p>
+              Precisa de ajuda com o sistema de irrigação?<br>
+              Entre em contanto com nossa equipe.
+            </p>
+          </div>
+        
         <div class="fale-conosco__grid">
-          <div fale-conosco__grid__fbox>
-            <h2>Enviar Mensagem</h2>
+          <div class="fale-conosco__grid__fbox">
+            <h2 class="fale-conosco__grid__fbox-subtitulo">Enviar Mensagem</h2>
             <form class="fale-conosco__grid__formulario">
-              <label for="nome">Nome</label>
+              <label for="nome">Nome *</label>
               <input type="text" id="nome" placeholder="Digite seu nome" required>
 
-              <label for="email">Email</label>
+              <label for="email">Email *</label>
               <input type="email" id="email" placeholder="Digite seu email" required>
 
               <label for="assunto">Assunto</label>
               <input type="text" id="assunto" placeholder="Digite o assunto">
 
-              <label for="mensagem">Mensagem</label>
+              <label for="mensagem">Mensagem *</label>
               <textarea id="mensagem" 
-              placeholder="Descreva sua dúvida ou problema">
-              </textarea>
+              placeholder="Descreva sua dúvida ou problema" minlength="20" required></textarea>
 
-              <button type="submit">
-                <img src="./asserts/enviar.png" alt="Icone de enviar">
+              <p class="fale-conosco__grid__fbox-aviso">
+                Campos marcados com * são obrigatórios!
+              </p>
+              
+              <button type="submit" class="fale-conosco__grid__fbox-button">
+                <img src="./asserts/fale-conosco/enviar.png" alt="Icone de enviar">
                 Enviar Mensagem
               </button>
 
             </form>
           </div>
+
           <div class="fale-conosco__grid__sbox">
-            
+            <ul>
+              <li>
+                <img src="./asserts/fale-conosco/telefone.png" alt="icone de telefone">
+                <div>
+                  <h4>Telefone</h4>
+                  <p>(11) 99999-9999</p>
+                </div>
+              </li>
+              <li>
+                <img src="./asserts/fale-conosco/e-mail.png" alt="icone de email">
+                <div>
+                  <h4> Email</h4>
+                  <p>suporte@irrigasmart.com</p>
+                </div>
+              </li>
+              <li>
+                <img src="./asserts/fale-conosco/relogio.png" alt="icone de relógio">
+                <div>
+                  <h4>Atendimento</h4>
+                  <p>Segunda a Sexta • 08:00 às 18:00</p>
+                </div>
+              </li>
+              <li>
+                <img src="./asserts/fale-conosco/localizador.png\" alt="icone de localização">
+                <div>
+                  <h4>Localização</h4>
+                  <p>São Paulo • Brasil</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         </section>
