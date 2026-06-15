@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+      <div class="sidebar__titulo">
+        <img src="./asserts/dashboard/plantar.png" alt="Icone do titulo">
+        <h1>Irriga<span class="destaque">Smart</span></h1>
+      </div>
+
+      <div class="sidebar__nav">
+        <a href="index.html">Dashboard</a>
+        <a href="sistemas.html">Sistemas</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+      </div>
+    </nav>
+
+    <section id="fale-conosco" class="aba">
+          <div class="fale-conosco__enunciado">
+            <h1>Fale conosco</h1>
+            <p>
+              Precisa de ajuda com o sistema de irrigação?<br>
+              Entre em contanto com nossa equipe.
+            </p>
+          </div>
+        
+        <div class="fale-conosco__grid">
+          <div class="fale-conosco__grid__fbox">
+            <h2 class="fale-conosco__grid__fbox-subtitulo">Enviar Mensagem</h2>
+            <form class="fale-conosco__grid__formulario">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+              <label for="email">Email *</label>
+              <input type="email" id="email" placeholder="Digite seu email" required>
+
+              <label for="assunto">Assunto</label>
+              <input type="text" id="assunto" placeholder="Digite o assunto">
+
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem" 
+              placeholder="Descreva sua dúvida ou problema" minlength="20" required></textarea>
+
+              <p class="fale-conosco__grid__fbox-aviso">
+                Campos marcados com * são obrigatórios!
+              </p>
+              
+              <button type="submit" class="fale-conosco__grid__fbox-button">
+                <img src="./asserts/fale-conosco/enviar.png" alt="Icone de enviar">
+                Enviar Mensagem
+              </button>
+
+            </form>
+          </div>
+
+          <div class="fale-conosco__grid__sbox">
+            <ul>
+              <li class="grid__sbox__conteudo">
+                <img src="./asserts/fale-conosco/telefone.png" alt="icone de telefone">
+                <div>
+                  <h4 class="grid__sbox__conteudo-subtitulo">Telefone</h4>
+                  <p class="grid__sbox__conteudo-texto">(11) 99999-9999</p>
+                </div>
+              </li>
+              <li class="grid__sbox__conteudo">
+                <img src="./asserts/fale-conosco/e-mail.png" alt="icone de email">
+                <div>
+                  <h4 class="grid__sbox__conteudo-subtitulo"> Email</h4>
+                  <p class="grid__sbox__conteudo-texto">suporte@irrigasmart.com</p>
+                </div>
+              </li>
+              <li class="grid__sbox__conteudo">
+                <img src="./asserts/fale-conosco/relogio.png" alt="icone de relógio">
+                <div>
+                  <h4 class="grid__sbox__conteudo-subtitulo">Atendimento</h4>
+                  <p class="grid__sbox__conteudo-texto">Segunda a Sexta • 08:00 às 18:00</p>
+                </div>
+              </li>
+              <li class="grid__sbox__conteudo">
+                <img src="./asserts/fale-conosco/mapa.png" alt="icone de localização">
+                <div>
+                  <h4 class="grid__sbox__conteudo-subtitulo">Localização</h4>
+                  <p class="grid__sbox__conteudo-texto">São Paulo • Brasil</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </section>
+    </div>
+</body>
+</html>

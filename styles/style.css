@@ -15,6 +15,8 @@
   --fonte-secundaria: "Montserrat", sans-serif, arial;
 }
 
+/* reset e configurações iniciais e da sidebar*/
+
 * {
   margin: 0;
   padding: 0;
@@ -49,29 +51,26 @@ body {
 
 .sidebar__nav {
   display: flex;
-  list-style: none;
 }
 
-.sidebar__nav li:hover {
+.sidebar__nav a:hover {
   color: var(--cor-principal);
   padding: 0.6rem 0.6rem;
   background-color: var(--cor-secundaria);
   border-radius: 0 1rem 0 1rem;
 }
 
-.sidebar li {
+.sidebar a {
+  color: var(--cor-texto-principal);
   margin: 0.4rem 0.4rem;
   padding: 0.6rem 0.6rem;
   cursor: pointer;
   font-family: var(--fonte-secundaria);
   font-weight: 500;
+  text-decoration: none;
 }
 
-.sidebar__nav li.ativo {
-  color: var(--cor-cards);
-  background-color: var(--cor-principal);
-  border-radius: 0 1rem 0 1rem;
-}
+/* inicio da estilização do dashboard */
 
 .dashboard__banner {
   height: 22rem;
@@ -341,9 +340,11 @@ body {
 .sistemas__horarios__tabela tbody td {
   border-top: 1px solid #f0f0f0;
 }
+
 /* término do css do sistemas */
 
 /* inicio do css do fale-conosco */
+
 .fale-conosco__grid {
   display: grid;
   grid-template-columns: 50% 30%;
@@ -482,13 +483,5 @@ body {
   font-weight: 500;
   font-size: 1rem;
   color: var(--cor-texto-secundaria);
-}
-
-.aba {
-  display: none;
-}
-
-.ativa {
-  display: grid;
 }
 
