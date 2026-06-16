@@ -380,11 +380,10 @@ body {
   color: var(--cor-principal);
   font-size: 1rem;
   font-weight: 700;
-  padding-bottom: 1.2rem;
   font-family: var(--fonte-secundaria);
 }
 
-.fale-conosco__grid__formulario {
+.form-content {
   display: flex;
   flex-direction: column;
 }
@@ -394,14 +393,33 @@ body {
   font-size: 0.9rem;
   font-weight: 650;
   padding-bottom: 0.4rem;
+  padding-top: 0.8rem;
 }
 
-.fale-conosco__grid__formulario input{
+.form-content input{
   padding: 0.5rem;
   border: 1px solid #CCCCCC;
   border-radius: 0.4rem;
-  margin-bottom: 1rem;
 }
+
+.form-content.error input,
+.form-content.error textarea {
+  border-color: var(--cor-aviso);
+}
+
+.form-content span {
+  color: var(--cor-aviso);
+  font-family: var(--fonte-secundaria);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
+  display: none;
+}
+
+.form-content.error span{
+  display: block;
+}
+
 
 .fale-conosco__grid__formulario input::placeholder {
   font-family: var(--fonte-secundaria);

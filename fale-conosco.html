@@ -36,19 +36,31 @@
         <div class="fale-conosco__grid">
           <div class="fale-conosco__grid__fbox">
             <h2 class="fale-conosco__grid__fbox-subtitulo">Enviar Mensagem</h2>
-            <form class="fale-conosco__grid__formulario">
-              <label for="nome">Nome *</label>
-              <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <form class="fale-conosco__grid__formulario" id="form">
 
-              <label for="email">Email *</label>
-              <input type="email" id="email" placeholder="Digite seu email" required>
+              <div class="form-content">
+                <label for="nome">Nome Completo*</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+                <span></span>
+              </div>
+              
+              <div class="form-content">
+                <label for="email">Email *</label>
+                <input type="text" id="email" placeholder="Digite seu email">
+                <span></span>
+              </div>
 
-              <label for="assunto">Assunto</label>
-              <input type="text" id="assunto" placeholder="Digite o assunto">
+              <div class="form-content">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" placeholder="Digite o assunto">
+              </div>
 
-              <label for="mensagem">Mensagem *</label>
-              <textarea id="mensagem" 
-              placeholder="Descreva sua dúvida ou problema" minlength="20" required></textarea>
+              <div class="form-content">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" 
+                placeholder="Descreva sua dúvida ou problema"></textarea>
+                <span style="padding-bottom: 10px;"></span>
+              </div>
 
               <p class="fale-conosco__grid__fbox-aviso">
                 Campos marcados com * são obrigatórios!
@@ -97,5 +109,7 @@
         </div>
         </section>
     </div>
+
+    <script src="./scripts/fale-conosco.js"></script>
 </body>
 </html>
