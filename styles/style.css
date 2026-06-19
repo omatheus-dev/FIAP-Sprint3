@@ -341,6 +341,73 @@ body {
   border-top: 1px solid #f0f0f0;
 }
 
+.simulador{
+  background:#fff;
+  margin:2rem 3rem;
+  padding:1.5rem;
+  border-radius:1rem;
+}
+
+.simulador h3{
+  font-family: var(--fonte-secundaria);
+  font-size:1.2rem;
+  font-weight:700;
+  color:var(--cor-principal);
+  margin-bottom:1rem;
+}
+
+.form-text{
+  font-family: var(--fonte-secundaria);
+  font-size:1rem;
+  font-weight:650;
+  padding-bottom:0.4rem;
+  padding-top:0.8rem;
+}
+
+.simulador input{
+  display:block;
+  border-radius: 0.4rem;
+  border:1px solid #CCCCCC;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+.simulador button{
+  background-color: var(--cor-principal);
+  color: var(--cor-cards);
+  border-radius: 0.4rem;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.simulador button:hover{
+  cursor: pointer;
+  color: var(--cor-principal);
+  background-color: var(--cor-secundaria);
+}
+
+.resultado{
+  margin-top: 1rem;
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  font-weight:500;
+  color:var(--cor-texto-principal);
+  display: none;
+}
+
+.resultado.error{
+  color:var(--cor-aviso);
+  font-size: 0.8rem;
+  display: block;
+}
+
+.resultado.success{
+  display: block;
+}
+
 /* término do css do sistemas */
 
 /* inicio do css do fale-conosco */
@@ -503,3 +570,26 @@ body {
   color: var(--cor-texto-secundaria);
 }
 
+@media (max-width:768px){
+  .sidebar{
+    flex-direction:column;
+    padding:1rem;
+    gap:1rem;
+  }
+  .sidebar__nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .dashboard__painel__list,
+  .sistemas__painel__list{
+    grid-template-columns:1fr;
+    margin:1rem;
+  }
+  .sistemas__grid{
+    grid-template-columns:1fr;
+    margin:1rem;
+  }
+  .dashboard__tabela{
+    overflow-x:auto;
+  }
+}

@@ -155,7 +155,19 @@
               </table>
             </div>
           </div>
+
+          <section class="simulador">
+            <h3>Simulador de Consumo de Água</h3>
+            <label for="litros" class="form-text">Litros por irrigação:</label>
+            <input type="number" id="litros" min="1" class="form-control">
+            <label for="vezes" class="form-text">Irrigações por dia:</label>
+            <input type="number" id="vezes" min="1" class="form-control">
+            <button id="calcular" class="btn btn-primary">Calcular</button>
+            <p id="resultado" class="resultado">bom dia</p>
+          </section>
         </section>
     </div>
 </body>
+
+<script src="scripts/sistemas.js"></script>
 </html>
